@@ -8,7 +8,7 @@ class pessoa(models.Model):
     def __str__(self) :
         return self.nome
 class Diario(models.Model):
-    titulo = models.CharField(max_length=100)
+    titulo = models.CharField(max_length=100 , null=False, blank=False)
     tags = models.TextField()
     texto = models.TextField()
     pessoas = models.ManyToManyField(pessoa)
